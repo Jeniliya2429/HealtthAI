@@ -1,0 +1,19 @@
+{
+  "disease": "Diabetes",
+  "accuracy": 0.9167,
+  "precision": 0.9167,
+  "recall": 0.9167,
+  "f1_score": 0.9166,
+  "cv_mean": 0.9171,
+  "cv_std": 0.019,
+  "confusion_matrix": [
+    [
+      300,
+      22
+    ],
+    [
+      28,
+      250
+    ]
+  ]
+}

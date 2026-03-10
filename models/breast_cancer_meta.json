@@ -1,0 +1,19 @@
+{
+  "disease": "Breast Cancer",
+  "accuracy": 0.9933,
+  "precision": 0.9933,
+  "recall": 0.9933,
+  "f1_score": 0.9933,
+  "cv_mean": 0.9979,
+  "cv_std": 0.0023,
+  "confusion_matrix": [
+    [
+      377,
+      1
+    ],
+    [
+      3,
+      219
+    ]
+  ]
+}
