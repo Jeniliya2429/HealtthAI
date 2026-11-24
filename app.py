@@ -1,9 +1,6 @@
 """
-=============================================================================
   AI Multi-Disease Risk Assessment System  |  app.py  |  v2.0
   10 Diseases | Full Error Handling | Diet Recommendations
-  Run: streamlit run app.py
-=============================================================================
 """
 
 import streamlit as st
@@ -12,7 +9,7 @@ import pandas as pd
 import time, os, sys, traceback
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-# ── Safe imports with fallback ────────────────────────────────────────────────
+# ── Safe imports with fallback 
 try:
     import matplotlib.pyplot as plt
     import matplotlib.patches as mpatches
@@ -37,9 +34,7 @@ from utils.preprocessing import (
     load_metrics, models_exist, partial_models_exist
 )
 
-# ─────────────────────────────────────────────────────────────────────────────
 #  PAGE CONFIG
-# ─────────────────────────────────────────────────────────────────────────────
 st.set_page_config(
     page_title="HealthAI — 10-Disease Risk Assessment",
     page_icon="🏥",
@@ -47,9 +42,7 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# ─────────────────────────────────────────────────────────────────────────────
 #  DISEASE REGISTRY — single source of truth
-# ─────────────────────────────────────────────────────────────────────────────
 DISEASES = {
     "diabetes"    : {"label": "Diabetes",        "icon": "🩸", "color": "#e74c3c"},
     "heart"       : {"label": "Heart Disease",   "icon": "❤️", "color": "#e91e63"},
@@ -63,9 +56,7 @@ DISEASES = {
     "anemia"      : {"label": "Anemia",          "icon": "🩺", "color": "#f44336"},
 }
 
-# ─────────────────────────────────────────────────────────────────────────────
 #  CSS INJECTION
-# ─────────────────────────────────────────────────────────────────────────────
 def inject_css():
     st.markdown("""
     <style>
@@ -195,9 +186,7 @@ def inject_css():
     """, unsafe_allow_html=True)
 
 
-# ─────────────────────────────────────────────────────────────────────────────
 #  SAFE CHART RENDERERS (matplotlib fallback when plotly unavailable)
-# ─────────────────────────────────────────────────────────────────────────────
 
 def render_gauge(prob: float, title: str, color: str):
     """Render a semi-circular gauge using matplotlib."""
